@@ -1,0 +1,372 @@
+﻿Competitor list loaded from C:\Users\gupta\OneDrive\Documents\WebMine-main\WebMine-main\WebMine-main\WebMine-main\competitors.csv:
+     BSC asin  ...                      Comp 3 name
+0  B0D2HFN2N1  ...              Mi Beard Trimmer 2C
+1  B098P8NRRW  ...  Philips Durapower Beard Trimmer
+2  B0D91S9NF1  ...      VEGA Cleanball Body Trimmer
+3  B0D96CPM1B  ...      Lifelong All-in-One Trimmer
+4  B0CKLP826Z  ...        Beardo Ape-X Prime 3-in-1
+5  B0CHSCR7B7  ...     Philips Skin Protect Trimmer
+6  B0CGNHGXXH  ...        Letsshave Pro Head Shaver
+
+[7 rows x 9 columns]
+BSC ASINs from platform: <ArrowStringArray>
+['B0D2HFN2N1', 'B098P8NRRW', 'B0D91S9NF1', 'B0D96CPM1B', 'B0CKLP826Z',
+ 'B0CHSCR7B7', 'B0CGNHGXXH']
+Length: 7, dtype: str
+Matched row found for BSC ASIN: B0D2HFN2N1
+BSC Trimmer: Power Play NXT Trimmer
+Competitor ASINs for B0D2HFN2N1: ['B0GNRN5619', 'B0GRGP1B8Y', 'B0BZZ263YF'], Category: Trimmers
+Scraping details for ASIN: B0GNRN5619
+ASIN: B0D2HFN2N1
+BSC Trimmer: Power Play NXT Trimmer
+Competitor ASIN: B0GNRN5619
+Competitor SKU: Havells 7-in-1 Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: Havells
+Count: 20K
+         ASIN             BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0D2HFN2N1  Power Play NXT Trimmer      B0GNRN5619  ...    4.0  Havells   20K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0GRGP1B8Y
+ASIN: B0D2HFN2N1
+BSC Trimmer: Power Play NXT Trimmer
+Competitor ASIN: B0GRGP1B8Y
+Competitor SKU: Philips Lift & Trim Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Error retrieving brand for ASIN B0GRGP1B8Y: 'NoneType' object has no attribute 'inner_text'
+Count: 20K
+         ASIN             BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0D2HFN2N1  Power Play NXT Trimmer      B0GRGP1B8Y  ...    4.2  Unknown   20K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0BZZ263YF
+ASIN: B0D2HFN2N1
+BSC Trimmer: Power Play NXT Trimmer
+Competitor ASIN: B0BZZ263YF
+Competitor SKU: Mi Beard Trimmer 2C
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Brand: Xiaomi
+Count: 8K
+         ASIN             BSC Trimmer Competitor ASIN  ... rating   brand count
+0  B0D2HFN2N1  Power Play NXT Trimmer      B0BZZ263YF  ...    4.2  Xiaomi    8K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B098P8NRRW
+BSC Trimmer: Beard Trimmer 120 Min
+Competitor ASINs for B098P8NRRW: ['B08NDMTN2W', 'B0CBMTG6D5', 'B0GSQQNKQC'], Category: Trimmers
+Scraping details for ASIN: B08NDMTN2W
+ASIN: B098P8NRRW
+BSC Trimmer: Beard Trimmer 120 Min
+Competitor ASIN: B08NDMTN2W
+Competitor SKU: VGR V-071 Beard Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Brand: VGR
+Count: 10K
+         ASIN            BSC Trimmer Competitor ASIN  ... rating brand count
+0  B098P8NRRW  Beard Trimmer 120 Min      B08NDMTN2W  ...    4.2   VGR   10K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CBMTG6D5
+ASIN: B098P8NRRW
+BSC Trimmer: Beard Trimmer 120 Min
+Competitor ASIN: B0CBMTG6D5
+Competitor SKU: VEGA Power Lite Beard Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: VEGA
+Count: 8K
+         ASIN            BSC Trimmer Competitor ASIN  ... rating brand count
+0  B098P8NRRW  Beard Trimmer 120 Min      B0CBMTG6D5  ...    4.0  VEGA    8K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0GSQQNKQC
+ASIN: B098P8NRRW
+BSC Trimmer: Beard Trimmer 120 Min
+Competitor ASIN: B0GSQQNKQC
+Competitor SKU: Philips Durapower Beard Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: PHILIPS
+Count: 7K
+         ASIN            BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B098P8NRRW  Beard Trimmer 120 Min      B0GSQQNKQC  ...    4.0  PHILIPS    7K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B0D91S9NF1
+BSC Trimmer: Baller Body Groomer
+Competitor ASINs for B0D91S9NF1: ['B0FK254X68', 'B0D6KT7GSY', 'B0CL9STL6B'], Category: Trimmers
+Scraping details for ASIN: B0FK254X68
+ASIN: B0D91S9NF1
+BSC Trimmer: Baller Body Groomer
+Competitor ASIN: B0FK254X68
+Competitor SKU: Philips Body & Balls Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: PHILIPS
+Count: 9K
+         ASIN          BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0D91S9NF1  Baller Body Groomer      B0FK254X68  ...    4.0  PHILIPS    9K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0D6KT7GSY
+ASIN: B0D91S9NF1
+BSC Trimmer: Baller Body Groomer
+Competitor ASIN: B0D6KT7GSY
+Competitor SKU: Beardo Ball Safe Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 3.3
+Brand: BEARDO
+Count: 700
+         ASIN          BSC Trimmer Competitor ASIN  ... rating   brand count
+0  B0D91S9NF1  Baller Body Groomer      B0D6KT7GSY  ...    3.3  BEARDO   700
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CL9STL6B
+ASIN: B0D91S9NF1
+BSC Trimmer: Baller Body Groomer
+Competitor ASIN: B0CL9STL6B
+Competitor SKU: VEGA Cleanball Body Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 3.6
+Brand: VEGA
+Count: 200
+         ASIN          BSC Trimmer Competitor ASIN  ... rating brand count
+0  B0D91S9NF1  Baller Body Groomer      B0CL9STL6B  ...    3.6  VEGA   200
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B0D96CPM1B
+BSC Trimmer: 11-in-1 Trimmer
+Competitor ASINs for B0D96CPM1B: ['B0G6DVB6DG', 'B0CW9944RQ', 'B0CGM2H1FK'], Category: Trimmers
+Scraping details for ASIN: B0G6DVB6DG
+ASIN: B0D96CPM1B
+BSC Trimmer: 11-in-1 Trimmer
+Competitor ASIN: B0G6DVB6DG
+Competitor SKU: Philips Skin Protect Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Brand: PHILIPS
+Count: 40K
+         ASIN      BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0D96CPM1B  11-in-1 Trimmer      B0G6DVB6DG  ...    4.2  PHILIPS   40K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CW9944RQ
+ASIN: B0D96CPM1B
+BSC Trimmer: 11-in-1 Trimmer
+Competitor ASIN: B0CW9944RQ
+Competitor SKU: Beardo Ape-X Prime 3-in-1
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: BEARDO
+Count: 5K
+         ASIN      BSC Trimmer Competitor ASIN  ... rating   brand count
+0  B0D96CPM1B  11-in-1 Trimmer      B0CW9944RQ  ...    4.0  BEARDO    5K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CGM2H1FK
+ASIN: B0D96CPM1B
+BSC Trimmer: 11-in-1 Trimmer
+Competitor ASIN: B0CGM2H1FK
+Competitor SKU: Lifelong All-in-One Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: Lifelong
+Count: 1K
+         ASIN      BSC Trimmer Competitor ASIN  ... rating     brand count
+0  B0D96CPM1B  11-in-1 Trimmer      B0CGM2H1FK  ...    4.0  Lifelong    1K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B0CKLP826Z
+BSC Trimmer: Premium Multi Grooming Trimmer
+Competitor ASINs for B0CKLP826Z: ['B0GNRF626K', 'B0GSVFV3R4', 'B0CW9944RQ'], Category: Trimmers
+Scraping details for ASIN: B0GNRF626K
+ASIN: B0CKLP826Z
+BSC Trimmer: Premium Multi Grooming Trimmer
+Competitor ASIN: B0GNRF626K
+Competitor SKU: Havells 8-in-1 Grooming Kit
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: Havells
+Count: 5K
+         ASIN                     BSC Trimmer  ...    brand count
+0  B0CKLP826Z  Premium Multi Grooming Trimmer  ...  Havells    5K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0GSVFV3R4
+ASIN: B0CKLP826Z
+BSC Trimmer: Premium Multi Grooming Trimmer
+Competitor ASIN: B0GSVFV3R4
+Competitor SKU: Gillette Series 5 All-in-One
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: Gillette
+Count: 600
+         ASIN                     BSC Trimmer  ...     brand count
+0  B0CKLP826Z  Premium Multi Grooming Trimmer  ...  Gillette   600
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CW9944RQ
+ASIN: B0CKLP826Z
+BSC Trimmer: Premium Multi Grooming Trimmer
+Competitor ASIN: B0CW9944RQ
+Competitor SKU: Beardo Ape-X Prime 3-in-1
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: BEARDO
+Count: 5K
+         ASIN                     BSC Trimmer  ...   brand count
+0  B0CKLP826Z  Premium Multi Grooming Trimmer  ...  BEARDO    5K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B0CHSCR7B7
+BSC Trimmer: 11-in-1 Grooming Kit
+Competitor ASINs for B0CHSCR7B7: ['B0GNRF626K', 'B0GYSCXRPT', 'B0G6DVB6DG'], Category: Trimmers
+Scraping details for ASIN: B0GNRF626K
+ASIN: B0CHSCR7B7
+BSC Trimmer: 11-in-1 Grooming Kit
+Competitor ASIN: B0GNRF626K
+Competitor SKU: Havells 8-in-1 Grooming Kit
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: Havells
+Count: 5K
+         ASIN           BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0CHSCR7B7  11-in-1 Grooming Kit      B0GNRF626K  ...    4.0  Havells    5K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0GYSCXRPT
+ASIN: B0CHSCR7B7
+BSC Trimmer: 11-in-1 Grooming Kit
+Competitor ASIN: B0GYSCXRPT
+Competitor SKU: Beardo Godfather Trimmer Kit
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Brand: BEARDO
+Count: 2K
+         ASIN           BSC Trimmer Competitor ASIN  ... rating   brand count
+0  B0CHSCR7B7  11-in-1 Grooming Kit      B0GYSCXRPT  ...    4.2  BEARDO    2K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0G6DVB6DG
+ASIN: B0CHSCR7B7
+BSC Trimmer: 11-in-1 Grooming Kit
+Competitor ASIN: B0G6DVB6DG
+Competitor SKU: Philips Skin Protect Trimmer
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.2
+Brand: PHILIPS
+Count: 40K
+         ASIN           BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0CHSCR7B7  11-in-1 Grooming Kit      B0G6DVB6DG  ...    4.2  PHILIPS   40K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Matched row found for BSC ASIN: B0CGNHGXXH
+BSC Trimmer: Head Shaver Pro
+Competitor ASINs for B0CGNHGXXH: ['B0DR2Z9T5S', 'B0CWRPVNWL', 'B0F4856YZ6'], Category: Trimmers
+Scraping details for ASIN: B0DR2Z9T5S
+ASIN: B0CGNHGXXH
+BSC Trimmer: Head Shaver Pro
+Competitor ASIN: B0DR2Z9T5S
+Competitor SKU: AGARO Head Shaver
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.3
+Brand: AGARO
+Count: 100
+         ASIN      BSC Trimmer Competitor ASIN  ... rating  brand count
+0  B0CGNHGXXH  Head Shaver Pro      B0DR2Z9T5S  ...    4.3  AGARO   100
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0CWRPVNWL
+ASIN: B0CGNHGXXH
+BSC Trimmer: Head Shaver Pro
+Competitor ASIN: B0CWRPVNWL
+Competitor SKU: Philips Electric Shaver
+Category: Trimmers
+Date: 2026-11-16
+Rating: 4.0
+Brand: PHILIPS
+Count: 5K
+         ASIN      BSC Trimmer Competitor ASIN  ... rating    brand count
+0  B0CGNHGXXH  Head Shaver Pro      B0CWRPVNWL  ...    4.0  PHILIPS    5K
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.
+Scraping details for ASIN: B0F4856YZ6
+ASIN: B0CGNHGXXH
+BSC Trimmer: Head Shaver Pro
+Competitor ASIN: B0F4856YZ6
+Competitor SKU: Letsshave Pro Head Shaver
+Category: Trimmers
+Date: 2026-11-16
+Rating: 3.7
+Brand: LetsShave
+Count: 50
+         ASIN      BSC Trimmer Competitor ASIN  ... rating      brand count
+0  B0CGNHGXXH  Head Shaver Pro      B0F4856YZ6  ...    3.7  LetsShave    50
+
+[1 rows x 9 columns]
+going in database
+Data inserted successfully.

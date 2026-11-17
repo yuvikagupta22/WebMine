@@ -80,6 +80,7 @@ if selected_category:
         if not avg_price_rating_data.empty:
                 price_history = avg_price_rating_data[['valuationdate', 'avgprice']].drop_duplicates(subset='valuationdate', keep='last').sort_values(by='valuationdate')
                 rating_history = avg_price_rating_data[['valuationdate', 'avgrating']].drop_duplicates(subset='valuationdate', keep='last').sort_values(by='valuationdate')
+                min_price, max_price = float(min_price), float(max_price)
                 gap = (max_price - min_price) / 10
                 yaxis_price_range = [min_price - gap, max_price + gap] if gap > 0 else [min_price, max_price]
                 col1, col2 = st.columns(2)
@@ -96,16 +97,16 @@ if selected_category:
                         xaxis_title='Date',
                         yaxis_title='Avg Price',
                         xaxis_rangeslider_visible=False,
-                        xaxis_range=[price_history['valuationdate'].iloc[-10], price_history['valuationdate'].iloc[-1]],
+                        xaxis_range=[price_history['valuationdate'].iloc[-min(10, len(price_history))], price_history['valuationdate'].iloc[-1]],
                         yaxis_range=yaxis_price_range,
                         yaxis=dict(
                             tick0=min_price,
-                            dtick=gap
+                            dtick=gap if gap > 0 else None
                         ),
                         height=500,
                         hovermode='x unified'
                     )
-                    st.plotly_chart(fig_price, use_container_width=True)
+                    st.plotly_chart(fig_price, width='stretch')
                 with col2:
                     st.write("### Average Rating over Time")
                     fig_rating = go.Figure()
@@ -119,7 +120,7 @@ if selected_category:
                         xaxis_title='Date',
                         yaxis_title='Avg Rating',
                         xaxis_rangeslider_visible=False,
-                        xaxis_range=[rating_history['valuationdate'].iloc[-10], rating_history['valuationdate'].iloc[-1]],
+                        xaxis_range=[rating_history['valuationdate'].iloc[-min(10, len(price_history))], rating_history['valuationdate'].iloc[-1]],
                         yaxis_range=[0, 5],
                         yaxis=dict(
                             tick0=0,
@@ -128,7 +129,7 @@ if selected_category:
                         height=500,
                         hovermode='x unified',
                     )
-                    st.plotly_chart(fig_rating, use_container_width=True)
+                    st.plotly_chart(fig_rating, width='stretch')
         else:
             st.error("No price or rating data found for the selected category.")
 else:
@@ -163,7 +164,7 @@ if selected_category:
         }).apply(
             lambda row: [color_ratings(row['rating'])] * len(row), axis=1
         )
-        st.dataframe(styled_sku_data, use_container_width=True)
+        st.dataframe(styled_sku_data, width='stretch')
     else:
         st.warning("No data found for the selected category.")
     
@@ -226,6 +227,7 @@ if selected_category:
             if not price_rating_data.empty:
                 price_history = price_rating_data[['valuationdate', 'price']].drop_duplicates(subset='valuationdate', keep='last')
                 rating_history = price_rating_data[['valuationdate', 'rating']].drop_duplicates(subset='valuationdate', keep='last')
+                min_price_sku, max_price_sku = float(min_price_sku), float(max_price_sku)
                 gap = (max_price_sku - min_price_sku) / 10
                 yaxis_price_range = [min_price_sku - gap, max_price_sku + gap] if gap > 0 else [min_price_sku, max_price_sku]
                 col1, col2 = st.columns(2)
@@ -245,13 +247,13 @@ if selected_category:
                         yaxis_range=yaxis_price_range,
                         yaxis=dict(
                             tick0=min_price_sku,
-                            dtick=gap
+                            dtick=gap if gap > 0 else None
                         ),
                         hovermode='x unified',
-                        # xaxis_range=[price_history['valuationdate'].iloc[-10], price_history['valuationdate'].iloc[-1]],
+                        # xaxis_range=[price_history['valuationdate'].iloc[-min(10, len(price_history))], price_history['valuationdate'].iloc[-1]],
                         height=500
                     )
-                    st.plotly_chart(fig_price, use_container_width=True)
+                    st.plotly_chart(fig_price, width='stretch')
                 with col2:
                     st.write("### Rating over Time")
                     fig_rating = go.Figure()
@@ -271,10 +273,10 @@ if selected_category:
                             dtick=0.5
                         ),
                         hovermode='x unified',
-                        # xaxis_range=[rating_history['valuationdate'].iloc[-10], rating_history['valuationdate'].iloc[-1]],
+                        # xaxis_range=[rating_history['valuationdate'].iloc[-min(10, len(price_history))], rating_history['valuationdate'].iloc[-1]],
                         height=500
                     )
-                    st.plotly_chart(fig_rating, use_container_width=True)
+                    st.plotly_chart(fig_rating, width='stretch')
 
             else:
                 st.error("No price or rating data found for the selected product.")
@@ -311,25 +313,23 @@ if selected_category:
                 fig_comparison.update_layout(
                     xaxis_title='Date',
                     yaxis=dict(
-                        title='Net Sales',
-                        titlefont=dict(color='blue'),
+                        title=dict(text='Net Sales', font=dict(color='blue')),
                         tickfont=dict(color='blue'),
                         range=[0, sales_history['netsales'].max() ]
                     ),
                     yaxis2=dict(
-                        title='Ratings',
-                        titlefont=dict(color='green'),
+                        title=dict(text='Ratings', font=dict(color='green')),
                         tickfont=dict(color='green'),
                         overlaying='y', 
                         side='right',
                         range=[0, rating_history['rating'].max() + 0.5]
                     ),
-                    # xaxis_range=[sales_history['valuationdate'].iloc[-10], sales_history['valuationdate'].iloc[-1]],
+                    # xaxis_range=[sales_history['valuationdate'].iloc[-min(10, len(price_history))], sales_history['valuationdate'].iloc[-1]],
                     xaxis_rangeslider_visible=False,
                     height=500,
                     hovermode='x unified' 
                 )
-                st.plotly_chart(fig_comparison, use_container_width=True)
+                st.plotly_chart(fig_comparison, width='stretch')
 
             
             combined_sales_and_reviews_data = get_sales_and_reviews_history(selected_asin)
@@ -359,25 +359,23 @@ if selected_category:
                 fig_comparison.update_layout(
                     xaxis_title='Date',
                     yaxis=dict(
-                        title='Net Sales',
-                        titlefont=dict(color='blue'),
+                        title=dict(text='Net Sales', font=dict(color='blue')),
                         tickfont=dict(color='blue')
                     ),
                     yaxis2=dict(
-                        title='Total Reviews',
-                        titlefont=dict(color='green'),
+                        title=dict(text='Total Reviews', font=dict(color='green')),
                         tickfont=dict(color='green'),
                         overlaying='y', 
                         side='right'  
                     ),
                     barmode='group', 
                     bargap=0.5,
-                    # xaxis_range=[sales_history['valuationdate'].iloc[-10], sales_history['valuationdate'].iloc[-1]], 
+                    # xaxis_range=[sales_history['valuationdate'].iloc[-min(10, len(price_history))], sales_history['valuationdate'].iloc[-1]], 
                     xaxis_rangeslider_visible=False,
                     height=500,
                 )
 
-                st.plotly_chart(fig_comparison, use_container_width=True)
+                st.plotly_chart(fig_comparison, width='stretch')
 
             else:
                 st.error("No sales or review data found for the selected product.")

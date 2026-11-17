@@ -1,14 +1,15 @@
+import os
 import psycopg2
 import pandas as pd
 
 def connect_to_db():
     try:
         conn = psycopg2.connect(
-            dbname="Scraper",
-            user="postgres",
-            password="Ritika@22",
-            host="localhost",
-            port=5432
+            dbname=os.environ.get("DB_NAME", "Scraper"),
+            user=os.environ.get("DB_USER", "postgres"),
+            password=os.environ.get("DB_PASSWORD", ""),
+            host=os.environ.get("DB_HOST", "localhost"),
+            port=int(os.environ.get("DB_PORT", 5432))
         )
         return conn
     except Exception as e:
@@ -53,6 +54,16 @@ def get_platform_code():
 
     return platform_codes
 
+def _to_number(value, cast=float):
+    """Return value as a number, or None if the scraper produced text like 'Error: ...'."""
+    try:
+        if value is None or pd.isna(value):
+            return None
+        return cast(str(value).replace(',', '').strip())
+    except (ValueError, TypeError):
+        return None
+
+
 def save_to_database(df_products: pd.DataFrame, df_reviews: pd.DataFrame):
     conn = None
     cursor = None
@@ -78,10 +89,10 @@ def save_to_database(df_products: pd.DataFrame, df_reviews: pd.DataFrame):
                 row['valuationdate'],
                 row['ASIN'],
                 row['title'],
-                row['price'],
-                row['rating'],
-                row['NumberOfRatings'],
-                row['NumberOfReviews']
+                _to_number(row['price']),
+                _to_number(row['rating']),
+                _to_number(row['NumberOfRatings'], int),
+                _to_number(row['NumberOfReviews'], int)
             ))
 
         for _, row in df_reviews.iterrows():
@@ -100,7 +111,7 @@ def save_to_database(df_products: pd.DataFrame, df_reviews: pd.DataFrame):
                 row['ASIN'],
                 row['review_id'],
                 row['name'],
-                row['rating'],
+                _to_number(row['rating']),
                 row['review'],
                 row['date'] 
             ))

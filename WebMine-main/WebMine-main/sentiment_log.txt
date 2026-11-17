@@ -1,0 +1,41 @@
+﻿Analyzing sentiment for ASIN: B098P8NRRW
+Overall Sentiment for B098P8NRRW: Overall, customers have mixed feelings about the trimmer. While the majority praise its affordability, excellent battery life, Type-C charging convenience, and value for money, several users express dissatisfaction regarding its cutting precision, inconsistent shave quality, and a tendency for the blade to heat up during extended use.
+Top Positive Keywords: ['battery', 'price', 'value', 'charging', 'durability']
+Top Negative Keywords: ['heating', 'cutting', 'shave', 'design', 'plastic']
+Top Mixed Keywords: ['attachments', 'size', 'performance', 'brand', 'versatility']
+Analyzing sentiment for ASIN: B0CGNHGXXH
+Overall Sentiment for B0CGNHGXXH: The Bombay Shaving Company Headshaver Pro receives mixed reviews, with many users praising its ergonomic design, close and comfortable shave, and convenient wet/dry usage, while others report significant issues regarding battery performance, blade durability over time, and a frustrating warranty claim process.
+Top Positive Keywords: ['Smooth shave', 'Ergonomic design', 'Easy cleaning', 'Waterproof feature', 'Powerful motor']
+Top Negative Keywords: ['Battery draining', 'Warranty issues', 'Customer service', 'Blade durability', 'Charging failure']
+Top Mixed Keywords: ['Battery life', 'Shaving time', 'Build quality', 'Blade sharpness', 'Brand reputation']
+Analyzing sentiment for ASIN: B0CHSCR7B7
+Overall Sentiment for B0CHSCR7B7: Customer reviews for the Bombay Shaving Company 11-in-1 Trimmer are generally favorable, highlighting its fast delivery, premium design, versatile attachments, and good battery life. However, some users reported issues with specific blades, shaping precision, nose hair trimming, and early battery durability.
+Top Positive Keywords: ['delivery', 'attachments', 'battery', 'design', 'value']
+Top Negative Keywords: ['shaping', 'nose-hair', 'durability', 'materials', 'stragglers']
+Top Mixed Keywords: ['blades', 'performance', 'build-quality', 'versatility', 'charging']
+Analyzing sentiment for ASIN: B0CKLP826Z
+Overall Sentiment for B0CKLP826Z: The product receives a mix of highly enthusiastic praise for its build quality, battery life, and smooth cutting performance, alongside serious complaints regarding overheating, fragile attachments, painful hair pulling, and incorrect charging accessories.
+Top Positive Keywords: ['battery life', 'finish', 'design', 'lightweight', 'display']
+Top Negative Keywords: ['overheating', 'slow timer', 'wrong charger', 'painful pulling', 'broken attachments']
+Top Mixed Keywords: ['attachments', 'performance', 'price', 'quality', 'blades']
+Analyzing sentiment for ASIN: B0D2HFN2N1
+Overall Sentiment for B0D2HFN2N1: The Bombay Shaving Company Power Play Next Trimmer is generally well-received by users for its lightweight design, ergonomic handling, smooth trimming performance, fast charging, and excellent value for money. While most customers appreciate its usefulness for daily grooming and gentle skin care, some users have reported drawbacks regarding hair cleaning efficiency, blade sharpness on harsh hair, and slippery plastic grip issues.
+Top Positive Keywords: ['Battery', 'Price', 'Smoothness', 'Attachments', 'Lightweight']
+Top Negative Keywords: ['Hair-cleaning', 'Blade-sharpness', 'Slipping', 'Harsh-hair', 'Expectations']
+Top Mixed Keywords: ['Grip', 'Build-quality', 'Materials', 'Cleaning', 'Design']
+Analyzing sentiment for ASIN: B0D91S9NF1
+Overall Sentiment for B0D91S9NF1: Overall, customer reception of the product is largely positive, with users praising its gentle ceramic blades, ergonomic design, and value for money, though some note drawbacks regarding durability concerns, sensitive switches, and slippery grips.
+Top Positive Keywords: ['Ceramic blades', 'Comfortable', 'Waterproof', 'Battery life', 'Value for money']
+Top Negative Keywords: ['Poor durability', 'Slippery body', 'Sensitive switch', 'Poor customer support', 'Lack of speed adjustment']
+Top Mixed Keywords: ['Trimming precision', 'Guard locking', 'Size adjustment', 'Heat generation', 'Versatility']
+Analyzing sentiment for ASIN: B0D96CPM1B
+Overall Sentiment for B0D96CPM1B: The trimmer receives generally positive feedback for its versatility, multiple attachments, ease of use, and battery life, though some users note minor drawbacks regarding charging time, blade heating, and performance on dense beards.
+Top Positive Keywords: ['versatile', 'lightweight', 'affordable', 'smooth', 'comfortable']
+Top Negative Keywords: ['unsharp', 'flimsy', 'slow-charging', 'hot-blades', 'non-intimate']
+Top Mixed Keywords: ['battery-backup', 'multiple-attachments', 'build-quality', 'cutting-performance', 'charging-speed']
+Category Sentiment: Overall, customer sentiment across the reviewed trimmers and grooming devices is largely positive, driven by strong appreciation for ergonomic designs, value for money, versatile attachments, smooth cutting performance, and convenient battery life and charging features. However, users frequently encounter consistent drawbacks, particularly concerning blade heating during extended use, slippery grips, variable cutting precision on dense or harsh hair, and occasional concerns regarding long-term durability and battery performance.
+Top Positive Keywords: ['value for money', 'ergonomic design', 'battery life', 'versatile attachments', 'smooth cutting performance']
+Top Negative Keywords: ['blade heating', 'slippery grip', 'cutting precision', 'durability concerns', 'hair pulling']
+Top Mixed Keywords: ['charging time', 'blade sharpness', 'battery performance', 'skin sensitivity', 'attachment quality']
+avgprice: 1435.43
+avgrating: 3.90

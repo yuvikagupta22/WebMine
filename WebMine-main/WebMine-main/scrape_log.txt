@@ -1,0 +1,53 @@
+﻿Scraping 7 active product(s): ['B0D2HFN2N1', 'B098P8NRRW', 'B0D91S9NF1', 'B0D96CPM1B', 'B0CKLP826Z', 'B0CHSCR7B7', 'B0CGNHGXXH']
+Title: Bombay Shaving Company Power Play NXT Trimmer for Men | Beard Trimmer for Man | Hair Trimmer for Man | Type C, 90 Min, 6 Combs, Self-Sharpening | Trimmer Men Beard | Trimmers for Man : Amazon.in: Beauty
+Price: 649.00
+Rating: 4.1
+Number of Ratings: 6310
+Could not find the filter info section.
+Title: Bombay Shaving Company Beard Trimmer For Men | Beard Trimmer for Man | Hair Trimmer for Man | Type C, 120 Min Runtime, 38 Settings, Cordless | Trimmer Men Beard | Trimmers for Man : Amazon.in: Health & Personal Care
+Price: 627.00
+Rating: 4.0
+Number of Ratings: 12122
+Could not find the filter info section.
+Error while scraping reviews for ASIN: B098P8NRRW. Error: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    53 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+Title: Bombay Shaving Company Balls Trimmer | Pubic Hair Trimmer and Body Groomer for Men | Private Part Trimmer Men | Waterproof (IPX6)| BALLER (New Model) : Amazon.in: Health & Personal Care
+Price: 1398.00
+Rating: 4.0
+Number of Ratings: 805
+Could not find the filter info section.
+Title: Bombay Shaving Company 11 in 1 | Trimmer for Men All in One | Beard Trimmer for Man | Hair Trimmer for Man | Nose Trimmer for Man | Body Trimmer for Man | Type C | Trimmer Men Beard | Trimmers for Man : Amazon.in: Health & Personal Care
+Price: 999.00
+Rating: 3.9
+Number of Ratings: 3483
+Could not find the filter info section.
+Title: Bombay Shaving Company Premium Multi Grooming Trimmer for Men | Body and Beard Trimmer for Man | Multi Styling Rotary Comb, IPX6 Waterproof, 90 Min Run Time, 2 Hrs Charge Time | 1 PC : Amazon.in: Health & Personal Care
+Price: 1398.00
+Rating: 3.7
+Number of Ratings: 506
+Could not find the filter info section.
+Title: Bombay Shaving Company 11-in-1 All-in-One Grooming Kit for Men
+Price: 2498.00
+Rating: 4.0
+Number of Ratings: 407
+Could not find the filter info section.
+Title: Bombay Shaving Company Head Shaver Pro
+Price: 2479.00
+Rating: 3.6
+Number of Ratings: 431
+Could not find the filter info section.

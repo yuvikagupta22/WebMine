@@ -1,4 +1,5 @@
 import asyncio
+import os
 import sys
 from datetime import datetime
 from openai import OpenAI
@@ -9,21 +10,28 @@ import warnings
 
 warnings.filterwarnings("ignore", message="pandas only supports SQLAlchemy")
 
+# Uses Google Gemini (free tier) through its OpenAI-compatible endpoint.
+# Key comes from the GEMINI_API_KEY environment variable; model can be overridden with AI_MODEL.
+client = OpenAI(
+    api_key=os.environ.get("GEMINI_API_KEY"),
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    timeout=90,      # don't hang for 10 minutes on a stuck request
+    max_retries=2,
+)
+AI_MODEL = os.environ.get("AI_MODEL", "gemini-flash-lite-latest")
+
 def get_openai_response(prompt):
     try:
         completion = client.chat.completions.create(
-            model="gpt-4o",
+            model=AI_MODEL,
             messages=[
-                {"role": "user", "content": f"""{prompt}"""},
-                {"role":"system","content":"Provide the top 5 for each keyword, ensuring there are no contradictions and no null values"}
+                {"role": "system", "content": "Provide the top 5 for each keyword, ensuring there are no contradictions and no null values"},
+                {"role": "user", "content": prompt}
             ],
             temperature=1,
-            max_tokens=256,
-            top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0
+            max_tokens=4000,  # generous: Gemini "thinking" also uses part of this budget
         )
-        response_content = completion.choices[0].message.content.strip()
+        response_content = (completion.choices[0].message.content or "").strip()
         return response_content
     except Exception as e:
         print(f"Error during API call: {str(e)}")
@@ -54,13 +62,13 @@ async def analyze_sentiment_batch(reviews):
 
             for line in response_text.strip().split('\n'):
                 if "Sentiment:" in line:
-                    sentiment = line.split(':')[-1].strip()
+                    sentiment = line.split(':', 1)[1].strip()
                 elif "Top Positive Keywords:" in line:
-                    top_positivekeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_positivekeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
                 elif "Top Negative Keywords:" in line:
-                    top_negativekeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_negativekeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
                 elif "Top Mixed Keywords:" in line:
-                    top_mixedkeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_mixedkeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
 
             if not top_positivekeywords or top_positivekeywords == ['']:
                 print("No positive keywords found in the response.")
@@ -109,13 +117,13 @@ async def analyze_category_sentiment(category):
             top_mixedkeywords = []
             for line in collective_summary.strip().split('\n'):
                 if "Sentiment:" in line:
-                    sentiment = line.split(':')[-1].strip()
+                    sentiment = line.split(':', 1)[1].strip()
                 elif "Top Positive Keywords:" in line:
-                    top_positivekeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_positivekeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
                 elif "Top Negative Keywords:" in line:
-                    top_negativekeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_negativekeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
                 elif "Top Mixed Keywords:" in line:
-                    top_mixedkeywords = [kw.strip() for kw in line.split(':')[-1].strip().split(',')]
+                    top_mixedkeywords = [kw.strip() for kw in line.split(':', 1)[1].strip().split(',')]
 
             if not top_positivekeywords or top_positivekeywords == ['']:
                 print("No positive keywords found in the response.")

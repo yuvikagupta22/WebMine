@@ -126,8 +126,10 @@ async def scrape_amazon_product(asin):
                         await take_screenshot(page, f"screenshots/{asin}_error_review_rating.png")
 
                     try:
-                        review['review'] = (await (await review_element.query_selector('span[data-hook="review-body"] span')).inner_text()).strip()
-                        # print(review['review'])
+                        # Amazon changed its layout: try the new selector first, then the old one
+                        body = (await review_element.query_selector('[data-hook="reviewRichContentContainer"]')
+                                or await review_element.query_selector('span[data-hook="review-body"] span'))
+                        review['review'] = (await body.text_content()).strip()
                     except Exception as e:
                         review['review'] = f"Error: {str(e)}"
                         await take_screenshot(page, f"screenshots/{asin}_error_review_text.png")

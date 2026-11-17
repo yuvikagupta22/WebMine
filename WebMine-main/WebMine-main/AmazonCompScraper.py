@@ -171,12 +171,17 @@ import asyncio
 import pandas as pd
 from playwright.async_api import async_playwright, TimeoutError
 from datetime import datetime
+import os
+import re
 from AmazonDatabase import save_comp_data
 
-def load_google_sheet(sheet_id):
-    df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
-    print("Google Sheet data loaded:")
-    print(df) 
+def load_competitor_list(path=None):
+    """Read the competitor list from competitors.csv (the original Google Sheet was deleted).
+    Columns: BSC asin, BSC Trimmer, Category, Comp 1, Comp 1 name, Comp 2, Comp 2 name, ..."""
+    path = path or os.path.join(os.path.dirname(os.path.abspath(__file__)), "competitors.csv")
+    df = pd.read_csv(path, dtype=str, encoding="utf-8-sig")
+    print(f"Competitor list loaded from {path}:")
+    print(df)
     return df
 
 async def take_screenshot(page, filename):
@@ -244,8 +249,7 @@ async def scrape_details(BSCasin, bsc_trimmer, asin, competitor_name, category):
         return pd.DataFrame([competitors_info])
 
 async def competitors_scrapper():
-    sheet_id = '1mzO0A9_WjbXoUu7PfmB_BC1bKQv6dHEO302IUb1smlc'
-    sheet_data = load_google_sheet(sheet_id)
+    sheet_data = load_competitor_list()
     
     # Get all unique BSC ASINs from the DataFrame
     bsc_asins = sheet_data['BSC asin'].unique()
@@ -268,7 +272,8 @@ async def competitors_scrapper():
         competitor_names = []
         
         for col in matched_row.columns:
-            if 'Comp' in col:
+            # Only "Comp 1", "Comp 2", ... hold ASINs; "Comp 1 name" columns hold names
+            if re.fullmatch(r'Comp \d+', col.strip()):
                 competitor_asins.append(matched_row[col].values[0])
                 name_col = col + ' name'
                 if name_col in matched_row.columns:

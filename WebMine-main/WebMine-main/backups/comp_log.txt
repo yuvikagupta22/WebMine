@@ -1,0 +1,8 @@
+﻿python : C:\Program Files\Python313\python.exe: can't open file 'C:\\Users\\gupta\\OneDrive\\Documents\\WebMine-main\\W
+ebMine-main\\WebMine-main\\WebMine-main\\backups\\AmazonCompScraper.py': [Errno 2] No such file or directory
+At line:1 char:440
++ ... ONUNBUFFERED='1'; python AmazonCompScraper.py *> comp_log.txt; "EXIT  ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Program File...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
